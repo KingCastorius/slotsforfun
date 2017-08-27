@@ -1,20 +1,16 @@
-function Refresh()
-{
-if (count > 0)
-{
-window.location.reload()
-}
-}
-
-
 let count = 0
-let one = Math.floor((Math.random()*9)+1)
-let two = Math.floor((Math.random()*9)+1)
-let three = Math.floor((Math.random()*9)+1)
+let one;
+let two;
+let three;
 let userOuput = document.getElementById("userOutput")
 
-if('one, two, three' % 2) {
-  userOutput.innerHTML = "You win!"
-} else{
-  userOutput.innerHTML = "You Lose"
+function spin() {
+  one = Math.floor((Math.random()*9)+1)
+  two = Math.floor((Math.random()*9)+1)
+  three = Math.floor((Math.random()*9)+1)
+  if(one % 2 === 0 && two % 2 === 0 && three % 2 === 0) {
+    alert('You win');
+  } else {
+    alert ('You lose')
+  }
 }
